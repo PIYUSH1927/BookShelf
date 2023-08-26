@@ -1,0 +1,295 @@
+*{
+    margin: 0px;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+#home{
+    background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,0.5)),url('image/bgimg.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    color:#fff;
+}
+
+.nav-link:hover{
+    background-color:black;
+}
+
+.text{
+    font-size: 46px;
+    font-family: Great;
+    text-shadow: 1px 1px 2px #fff;
+}
+
+.display-text{
+    width: 40%;
+    color: white;
+    margin-left: 425px;
+    margin-top: 40px;
+    text-align: center;
+}
+.display-text h1{
+    font-size: 50px;
+}
+
+.display-text p{
+    font-size: 18px;
+}
+.icons a{
+    color: white;
+    font-size: 30px;
+    display:inline-flex;
+    text-decoration: none;  
+    border-radius: 50px; 
+}
+.icons a:hover{
+    background-color: white;
+    color:black
+}
+
+
+
+.common-title{
+    font-size: 3rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 5px #aaa;
+}
+
+.common-title::first-letter{
+    font-family: 'Great Vibes',cursive;
+    font-size: 5rem;
+    margin-right: 10px;
+    font-style: normal;
+}
+.gallery-img{
+    transition: all .5s;
+}
+.gallery-img:hover{
+    transform: scale(1.05);
+}
+.first-row{
+    transform: translateX(-300px);
+    opacity: 0;
+    transition: all 2.5s;
+}
+.second-row{
+    transform: translateX(300px);
+    opacity: 0;
+    transition: all 2.5s;
+}
+
+.change .first-row, .change .second-row{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.famous-writers{
+    background: linear-gradient(rgba(250, 250, 250 , .8),rgba(250, 250, 250, .9)),url('image/writers-bg.jpeg');
+    background: fixed center no-repeat /cover;
+}
+
+.suggested-books{
+    height: 120vh;
+    background: url(image/wood-bg.jpeg);
+    background: center no-repeat /cover;
+}
+
+.books{
+    position: relative;
+    height: 70vh;
+}
+
+.book{
+    width: 55%;
+    position: absolute;
+    box-shadow: 5px 5px 15px #444;
+    border-right: 5px solid #777;
+    border-bottom: 10px solid #444;
+    transition: all .7s ease-in-out;
+}
+
+.book-1{
+    top: 5%;
+    left: 20%;
+    transform: rotate(-45deg);
+}
+.book-2{
+    top: 20%;
+    left: 50%;
+    transform: rotate(40deg);
+}
+.book-3{
+    top: 40%;
+    left: 40%;
+    transform: rotate(55deg);
+}
+.book-4{
+    top: 35%;
+    left: 10%;
+    transform: rotate(-38deg);
+}
+
+.book:hover{
+    transform: scale(1.3) rotateX(20deg);
+    z-index: 50;
+    box-shadow: 5px 5px 25px #444;
+    border-right: 10px solid #ddd;
+    border-bottom: 20px solid #bbb;
+}
+
+.popular-books{
+    background: url('image/about-bg.jpg');
+    background: fixed center no-repeat /cover;
+}
+
+.book-card{
+    position: relative;
+    box-shadow: 5px 15px 50px #aaa;
+    max-width: 420px;
+    overflow: hidden;
+    transition: all .8s;
+}
+.back{
+    position: absolute;
+    top: -100%;
+    background: #fefefe;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+    transform: rotateY(180deg);
+    transition: top .8s, opacity .4s;
+}
+
+.back-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rotate:hover .book-card{
+    transform: rotateY(180deg);
+}
+
+.rotate:hover .back{
+    opacity: 1;
+    top:0;
+    user-select: auto;
+    pointer-events: auto;
+}
+
+.contact{
+    background: linear-gradient(rgba(0, 0, 0, .8),rgba(0, 0, 0, .9)),url(image/header-bg.jpeg);
+    background: fixed center no-repeat /cover;
+}
+
+.items-wrapper{
+    background: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.6)),url(image/items-wrapper-bg.jpg);
+    background: center no-repeat /cover;
+    border-radius: 5px;
+}
+.floating-item{
+    background:rgba(0,0,0,.65);
+}
+
+.first-item{
+    animation: float 7s infinite;
+}
+.second-item{
+    animation: float 5s ease-out  infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea{
+    background: transparent;
+    font-size: 18px;
+    color:#333;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    background: rgba(250, 250, 250, .8);
+    box-shadow: none;
+}
+
+@media only screen and (max-width:1000px){
+    #home{
+        background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,0.5)),url('image/bgimg.jpg');
+        background-size: cover;
+        height: 110vh;
+        background-repeat: no-repeat;
+        color:#fff;
+    }
+    .text{
+       display: none;
+    }
+    .display-text{
+        width: 80%;
+        color: white;
+        text-align: center;
+        margin-left: 40px;
+        margin-top: 10px;
+    }
+    .display-text h1{
+        font-size: 35px;
+    }
+    
+    .display-text p{
+        font-size: 15px;
+    }
+    .icons a{
+        color: white;
+        font-size: 20px;
+        text-decoration: none;   
+    }
+    .navbar-toggler-icon{
+        font-size: 80%;
+    }
+    .yo{
+        height: 50px;
+        width: 100px;
+    }
+    .gallery-img{
+        transition: none;
+    }
+    .gallery-img:hover{
+        transform: none;
+    }
+    .first-row{
+        transform: none;
+        opacity: 0;
+        transition: none;
+    }
+    .second-row{
+        transform: none;
+        opacity: 0;
+        transition: none;
+    }
+    
+    .change .first-row, .change .second-row{
+        transform: none;
+        opacity: 1;
+    }
+    .book{
+        width:35%;
+    }
+}
