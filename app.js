@@ -11,11 +11,16 @@ app.use(express.static('public'));
  
 app.use(bodyParser.urlencoded({ extended:true }));
 
+const DB = 'mongodb+srv://padiapiyush12:newpassword12@cluster0.wppr9mj.mongodb.net/contactdata?retryWrites=true&w=majority'
 
-mongoose.connect("mongodb://127.0.0.1/contactdata", {
+
+mongoose.connect(DB, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+  useUnifiedTopology: true,
+}).then(()=>{
+  console.log(`connection successful`);
+}).catch((err)=>console.log(`no connection`));
+
 
 const db = mongoose.connection;
 

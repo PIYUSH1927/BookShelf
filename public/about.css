@@ -14,14 +14,15 @@ body{
     color:#fff;
 }
 
-.nav-link:hover{
-    background-color:black;
-}
-
 .text{
-    font-size: 46px;
+    font-size: 36px;
     font-family: Great;
-    text-shadow: 1px 1px 2px #fff;
+    text-shadow: 1px 1px 2px #333;
+}
+.text1{
+    font-size: 40px;
+    font-family: Great;
+    text-shadow: 2px 2px 1px #fff;
 }
 
 .display-text{
@@ -40,6 +41,10 @@ body{
     margin-top: 10px;
     text-align: center;
 }
+.nav-link:hover{
+    background-color:rgb(247, 132, 132);
+}
+
 
 .display-text p{
     font-size: 18px;
@@ -150,7 +155,9 @@ body{
     border-right: 10px solid #ddd;
     border-bottom: 20px solid #bbb;
 }
-
+.navbar{
+    background-color: white;
+}
 .popular-books{
     background: url('image/about-bg.jpg');
     background: fixed center no-repeat /cover;
@@ -250,6 +257,10 @@ body{
         height: 190vh;
         
         color:#fff;
+    }
+    .navbar{
+        background-color: rgb(247, 132, 132);
+
     }
     .text{
        display: none;

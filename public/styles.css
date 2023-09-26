@@ -14,13 +14,18 @@ body{
 }
 
 .nav-link:hover{
-    background-color:black;
+    background-color:rgb(247, 132, 132);
 }
 
 .text{
-    font-size: 46px;
+    font-size: 36px;
     font-family: Great;
-    text-shadow: 1px 1px 2px #fff;
+    text-shadow: 1px 1px 2px #333;
+}
+.text1{
+    font-size: 40px;
+    font-family: Great;
+    text-shadow: 2px 2px 1px #fff;
 }
 
 .display-text{
@@ -230,6 +235,9 @@ body{
     background: rgba(250, 250, 250, .8);
     box-shadow: none;
 }
+.navbar{
+    background-color: white;
+}
 
 @media only screen and (max-width:1000px){
     #home{
@@ -239,6 +247,11 @@ body{
         background-repeat: no-repeat;
         color:#fff;
     }
+    .navbar{
+        background-color: rgb(247, 132, 132);
+
+    }
+    
     .text{
        display: none;
     }
