@@ -82,6 +82,6 @@ app.post('/contact', async (req, res) => {
 
 
 
-app.listen(800,function(req,res){
-    console.log("Server has started successfully")
-})
+app.listen(process.env.PORT || 8000, function() {
+  console.log("Server has started successfully");
+});
